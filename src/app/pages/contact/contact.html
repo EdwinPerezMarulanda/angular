@@ -1,0 +1,37 @@
+<form class="form" #form="ngForm" (ngSubmit)="enviar(form)">
+  <h2>Inscríbete a uno de nuestros centros de interés</h2>
+
+  <label>Nombre:
+    <input name="nombre" ngModel required />
+  </label>
+
+  <label>Apellido:
+    <input name="apellido" ngModel required />
+  </label>
+
+  <label>Teléfono:
+    <input name="telefono" ngModel required />
+  </label>
+
+  <label>Selecciona uno:
+    <select name="area" ngModel required>
+      <option value=""></option>
+      <option value="musica">Música</option>
+      <option value="audiovisuales">Audiovisuales</option>
+      <option value="voleibol">Voleibol</option>
+      <option value="artesmarciales">Artes Marciales</option>
+      <option value="astronomia">Astronomía</option>
+      <option value="robotica">Robótica</option>
+    </select>
+  </label>
+
+  <section>
+    <button type="submit">Enviar</button>
+  </section>
+
+  @if (exito) {
+    <div class="msg-exito">
+      ¡Mensaje enviado con éxito! Redirigiendo...
+    </div>
+  }
+</form>
